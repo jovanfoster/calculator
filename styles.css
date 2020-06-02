@@ -1,0 +1,14 @@
+.btn-num{
+    background-color: rgba(255, 187, 40, 0.6);
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    font-size: 50px;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+    background-color: rgb(red, green, rgba(53, 53, 53, 0.6));
+}
