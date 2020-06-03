@@ -1,33 +1,21 @@
-function add(a, b){
-    return a + b;
+// clears the display 
+function clear(){
+    display.textContent = '';
 }
 
-function subtract(a, b){
-    return a - b;
-}
-
-function multiply(a, b){
-    return a * b;
-}
-
-function divide(a, b){
-    return a / b;
-}
-
+// declaring some DOM variables
 const display = document.querySelector('.display')
 const clr = document.querySelector('#clr')
 const equals = document.querySelector('#equals')
-const addBtn = document.querySelector('#add-Btn')
-const subBtn = document.querySelector('#sub-Btn')
-const multBtn = document.querySelector('#mult-Btn')
-const divBtn = document.querySelector('#div-Btn')
-const decimalBtn = document.querySelector('#decimal-Btn')
-const numbers = document.querySelectorAll('.btn-num');
 
-let num1, num2;
+const buttons = document.querySelectorAll('.btn');
 
-numbers.forEach((num) => num.addEventListener('click', e => {
+buttons.forEach((btn) => btn.addEventListener('click', e => {
     display.textContent += e.target.textContent;
 }));
 
-clr.addEventListener('click', () => display.textContent = '')
+clr.addEventListener('click', () => clear());
+
+equals.addEventListener('click', () => {
+    display.textContent = eval(display.textContent.replace('=', ''));
+});

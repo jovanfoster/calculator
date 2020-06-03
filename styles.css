@@ -39,6 +39,8 @@
     text-align: right;
     flex-direction: column;
     justify-content: flex-end;
+    overflow: hidden;
+    text-overflow: clip;
     border: 2px solid black;
     height: 98px;
     font-family: Arial, Helvetica, sans-serif;
